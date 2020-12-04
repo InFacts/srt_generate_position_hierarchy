@@ -660,8 +660,15 @@ addChild(167, 36)
 
 # print(len(TreePaths))
 
+unique_ify = set() # Assumes that order does not matter
+
 for data in TreePaths:
-    print(f'{data[0]}\t{data[1]}\t{data[2]}')
+
+    unique_ify.add((data[0], data[1], data[2]))
+
+for data in list(unique_ify):
+
+    print("{}\t{}\t{}".format(data[0], data[1], data[2]))
 
 
 
